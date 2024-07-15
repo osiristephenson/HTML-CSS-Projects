@@ -1,0 +1,28 @@
+.wrapper {
+    display: block;
+    /* this is the default */
+    margin: 1em auto;
+    /* centers on the page */
+    padding: .25em;
+    /* inside the wrapper's border */
+    width: 30em;
+    /*960px */
+    font-size: 2em;
+    /*32px */
+    outline: solid .125em gray;
+}
+
+.item {
+    display: inline;
+    /* this is the default for span.  What if item was a <div>? */
+    /* width: 5em; */
+    /* padding: .5em;
+    margin: .5em; */
+    /*notice vertical margin is not doubled! */
+    outline: solid .0625em lightgray;
+    /*
+    /* below CSS not needed for this exercise, just here to help today's presentation */
+    background-color: yellow;
+    background-clip: content-box;
+    /* line above makes the padding visible */
+}

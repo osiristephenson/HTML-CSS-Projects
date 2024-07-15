@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+header, main, article {
+    padding: 1em;
+}
+
+header {
+    background-color: #c0c0c0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 6.25em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: .125em solid #808080;
+    background-color: #d8d8d8;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: .5em 0;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+/* media breaks */
+@media only screen and (max-width: 48em) {
+    main {
+        max-width: 18.5em;
+        margin: auto;
+    }
+
+    /* image adjustment */
+    img, article {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    main {
+        width: 46em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article {
+        width: calc(50% - 1em); /* taking away gaps*/
+    }
+
+    /* adjust for wide view */
+    img, article {
+        width: auto;
+    }
+
+    /* beyoncé and taylor swift's order swaps */
+    main article:first-of-type {
+        order: 2;
+    }
+
+    main article:last-of-type {
+        order: 1;
+    }
+}

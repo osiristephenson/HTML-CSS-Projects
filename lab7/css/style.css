@@ -1,0 +1,117 @@
+/*styles.css*/
+figure {
+    margin: 0 auto;
+}
+
+html { 
+    --desktop-width:62.5em;
+    --tablet-width:31.5em;
+    --phone-width:16em;
+}
+
+div {
+    display: flex;
+    flex-flow: wrap;
+    width:100%;
+    gap: .5em;
+    padding: .5em;
+    margin: auto; 
+    justify-content: center;
+}
+
+div >* {
+   flex: 0 1 15em;
+}
+
+header, footer, nav {
+    flex: 0 1 calc(var(--desktop-width) - 1em);
+    border: solid .0625em silver;
+    padding: 1em; 
+}
+
+nav{
+    display: flex;
+    gap: 1em;
+}
+
+a {
+    flex-basis: 4em; 
+    height: 4em;
+    border: outset .0625em silver;
+    background-size: 48%;
+    background-repeat: no-repeat; /*added this line based on correction in feedback from Dr.Mittleman*/
+    color: transparent;
+
+}
+a:first-child{
+    background-image:url(../images/blue.png);
+}
+
+a:last-child{
+    background-image:url(../images/green.png);
+}
+
+a:hover {
+    filter:invert(100%);
+}
+a:active {
+    border-color: red;
+    filter:invert(0);
+    border-style: inset; 
+    background-color: red
+}
+h1 {
+    font-family: futura;
+    font-size: 3em;
+    color: blue;
+    text-shadow: .005em.005em .05em gray;
+    width: max-content;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article p:nth-child(3) {
+    text-indent: 1em;
+}
+article p:nth-child(4) {
+    text-indent: 1em; /*fixed typo from tex to text based on Dr. Mittleman's observation and corrections*/
+}
+
+
+
+@media screen and (max-width: 62.5em) {
+    div {
+        width: 31.5em;
+    }
+    header,footer{
+        width: calc(var(--tablet-width) - 1em);
+     }
+}
+
+    footer {
+        order: -1;
+    }
+
+ 
+    @media screen and (max-width: 32em) {
+    div {
+        width: 16em;
+    }
+    
+    header, footer {
+        width: calc(var(--phone-width) - 1em);
+    }
+}
+
+    h1 {
+        font-size: 2em;
+    }
+    footer {
+        order:2;
+    }
+   figure~figure {
+    order: 3;
+   }
