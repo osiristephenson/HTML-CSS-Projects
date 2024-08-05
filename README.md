@@ -1,4 +1,4 @@
-# HCI406 Projects
+# HTML-CSS Projects
 
 ## Project 1: Hello World Plus
 I developed a basic HTML document to introduce fundamental web development concepts. The page includes a personalized greeting, my chosen editor (Visual Studio Code), and a line from our course textbook. This HTML file was uploaded to a SiteGround hosting account and validated using the W3C HTML Validator to ensure compliance with HTML5 standards.
